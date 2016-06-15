@@ -1,19 +1,19 @@
 //new audio object
-mp3file.onchange = function(){
-  var audio = new Audio();
-  audio.src = URL.createObjectURL(document.getElementsById('mp3file');
-  audio.controls = true;
-  audio.loop = false;
-  audio.autoplay = false;
+audiofile.onchange = function(){
+  var files = this.files;
+  var file = URL.createObjectURL(files[0]);
+  audioplayer.src = file;
+  audioplayer.play();
 };
 //Analyser variables
 var canvas, ctx, source, context, analyser, fbc_array, bars, bar_x, bar_width, bar_height;
 var mp3file = document.getElementById('mp3file');
 
 //Init mp3player and analyser after page loads
-window.addEventListener("load", initMp3Player, false);
 
-function initMp3Player(){
+window.addEventListener("load", init, false);
+
+function init(){
   document.getElementById('audiobox').appendChild(audio);
   context = new AudioContext();
   analyser = context.createAnalyser();
