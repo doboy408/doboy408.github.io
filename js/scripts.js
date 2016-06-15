@@ -13,6 +13,8 @@ document.querySelector('input').onchange = funtion(){
   audioplayer.play();
 
 }
+
+/*
 //Analyser variables
 var canvas, ctx, source, context, analyser, fbc_array, bars, bar_x, bar_width, bar_height;
 
@@ -49,3 +51,4 @@ function looper(){
     ctx.fillRect(bar_x, canvas.height, bar_width, bar_height);
   }
 }
+*/
