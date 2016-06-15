@@ -1,10 +1,18 @@
 //new audio object
-audiofile.onchange = function(){
-  var files = this.files;
-  var file = URL.createObjectURL(files[0]);
-  audioplayer.src = file;
+document.querySelector('input').onchange = funtion(){
+  var fileReader = new FileReader;
+  fileReader.onload = function(){
+    var arrayBuffer = this.result;
+    snippet.log(arrayBuffer);
+    snippet.log(arrayBuffer.byteLength);
+  }
+  fileReader.readAsArrayBuffer(this.files[0]);
+
+  var url = URL.createObjectURL(this.files[0]);
+  audioplayer.src = url;
   audioplayer.play();
-};
+
+}
 //Analyser variables
 var canvas, ctx, source, context, analyser, fbc_array, bars, bar_x, bar_width, bar_height;
 
@@ -13,8 +21,8 @@ var canvas, ctx, source, context, analyser, fbc_array, bars, bar_x, bar_width, b
 window.addEventListener("load", init, false);
 
 function init(){
-  document.getElementById('audiobox').appendChild(audio);
-  context = new AudioContext();
+  document.getElementById('audiobox').appendChild(url);
+  context = new AudioContext(window.AudioContext || window.webkitAudioContext)();
   analyser = context.createAnalyser();
   canvas = document.getElementById('anal');
   ctx = canvas.getContext('2d');
