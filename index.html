@@ -1,7 +1,34 @@
 <!DOCTYPE html>
 <html>
+  <head>
+        <!-- http://getbootstrap.com/ -->
+        <link href="/css/bootstrap.min.css" rel="stylesheet"/>
+        <!-- app's own CSS -->
+        <link href="/css/styles.css" rel="stylesheet"/>
+        <!-- http://jquery.com/ -->
+        <script src="/js/jquery-1.11.3.min.js"></script>
+        <!-- http://getbootstrap.com/ -->
+        <script src="/js/bootstrap.min.js"></script>
+        <!-- http://underscorejs.org/ -->
+        <script src="/js/underscore-min.js"></script>
+        <!-- https://github.com/twitter/typeahead.js/ -->
+        <script src="/js/typeahead.jquery.min.js"></script>
+        <!-- app's own JavaScript -->
+        <script src="/js/scripts.js"></script>
+        <title>Bass In Your Face</title>
+  </head>
 <body>
-<h1>CS50 final project</h1>
+<h1>Bass In Your Face</h1>
+<div id="mp3player">
+  <div id="audiobox"></div>
+  <canvas id="anal"></canvas>
+</div>
+<div>
+
+    Select an mp3 file: <input id="mp3file" type="file" accept="audio/*" />
+    <audio id="mp3player" />
+
+</div>
 <p>I'm hosted with GitHub Pages.</p>
 </body>
 </html>
