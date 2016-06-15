@@ -1,12 +1,12 @@
 //new audio object
-document.querySelector('input').onchange = funtion(){
-  var fileReader = new FileReader;
-  fileReader.onload = function(){
+document.querySelector('input').onchange = function(){
+  var reader = new FileReader;
+  reader.onload = function(){
     var arrayBuffer = this.result;
     snippet.log(arrayBuffer);
     snippet.log(arrayBuffer.byteLength);
   }
-  fileReader.readAsArrayBuffer(this.files[0]);
+  reader.readAsArrayBuffer(this.files[0]);
 
   var url = URL.createObjectURL(this.files[0]);
   audioplayer.src = url;
