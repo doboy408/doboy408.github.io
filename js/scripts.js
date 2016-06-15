@@ -7,7 +7,6 @@ audiofile.onchange = function(){
 };
 //Analyser variables
 var canvas, ctx, source, context, analyser, fbc_array, bars, bar_x, bar_width, bar_height;
-var mp3file = document.getElementById('mp3file');
 
 //Init mp3player and analyser after page loads
 
