@@ -9,6 +9,6 @@ h1 {
 p {
     color:green;
 }
-div#audioplayer{width:500px; height:60px; background:#000; padding:5px; margin:50px auto;}
-div#audioplayer > div > audio{width:500px; background:#000; float:left;}
-div#audioplayer > canvas{width:500px; height:30px; background:#002D3C; float:left;}
+div#audio_player{width:500px; height:60px; background:#000; padding:5px; margin:50px auto;}
+div#audio_player > div > audio{width:500px; background:#000; float:left;}
+div#audio_player > canvas{width:500px; height:30px; background:#002D3C; float:left;}
