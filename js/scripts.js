@@ -1,7 +1,7 @@
 //new audio object
 mp3file.onchange = function(){
   var audio = new Audio();
-  audio.src = URL.createObjectURL(document.getElementsByTagName('input')[0].files[0]);
+  audio.src = URL.createObjectURL(document.getElementsById('mp3file');
   audio.controls = true;
   audio.loop = false;
   audio.autoplay = false;
