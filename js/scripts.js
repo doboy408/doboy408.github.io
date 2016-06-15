@@ -29,7 +29,7 @@ function initMp3Player(){
 
 //frameLooper() looping animating style of graphics
 function looper(){
-  window.RequestAnimationFrame(looper);
+  window.requestAnimationFrame(looper);
   fbc_array = new Uint8Array(analyser.frequencyBinCount);
   analyser.getByteFrequencyData(fbc_array);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
