@@ -28,7 +28,7 @@ function init(){
   ctx = canvas.getContext('2d');
 
   //re-route mp3 playback to processing graph
-  source = context.createMediaElementSource(audio);
+  source = context.createMediaElementSource(url);
   source.connect(analyser);
   analyser.connect(context.destination);
   looper();
